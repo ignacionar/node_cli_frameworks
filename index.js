@@ -35,7 +35,8 @@ program
       .then((answers) => {
         let projectFramework = answers.framework;
         let projectName = answers.pname;
-        let myPath = `C:/Users/Narvaja/Desktop/my-${projectName}-project`
+        let myPath = `C:/Users/Narvaja/Desktop/${projectName}`
+        console.log(answers)
         fs.mkdirSync(path.resolve(myPath), {recursive: true})
         if (projectFramework === 'Node') {
           fse.copySync("./node", myPath);
